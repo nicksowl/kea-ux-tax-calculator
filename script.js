@@ -1,3 +1,5 @@
+// PIPKA
+
 function calculateTax() {
     let income = document.getElementById('money').value;
     let tax = document.getElementById('tax').value;
