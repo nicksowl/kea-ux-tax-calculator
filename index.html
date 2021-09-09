@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tax calculator</h1>
+    </header>
+
+    <main>
+        <section id='calculator'>
+
+            <form onsubmit="event.preventDefault()">
+                <label for="money">Monetary amount</label><br>
+                <input type="number" name="money" id="money" required
+                min='0.01' step='0.01' pattern="^[0-9]" placeholder="0"> <br>
+    
+                <label for="tax">Tax percentage</label><br>
+                <input type="number" name="tax" id="tax" required min='0.01' max='100' step='0.01' pattern="[0-9]" placeholder="0"> <br>
+    
+                <input type="submit" value="Calculate" id='calculate' onclick="calculateTax()">
+            </form>
+
+        </section>
+
+        <section id='result'>
+            <p id='resultAmount' class='floatLeft'>Final amount: <p id='finalAmount' class='resultNumber'>0</p></p>
+            <p id='resultTax' class='floatLeft'>Tax amount: <p id='finalTax' class='resultNumber'>0</p></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy 2021 Nikolai Baida</p>
+    </footer>
+    
+</body>
+</html>
